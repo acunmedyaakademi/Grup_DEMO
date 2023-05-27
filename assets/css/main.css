@@ -48,6 +48,94 @@ h6 {
 }
 
 /* <!-- Menü Başlangıç MERT --> */
+.navBar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  gap: 70px;
+}
+
+.middleArea {
+  display: none;
+}
+
+.rightArea {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  align-items: center;
+  padding-right: 9px;
+}
+
+.hamburger {
+  padding: 18px 0;
+  padding-left: 14px;
+  cursor: pointer;
+}
+
+.crisp {
+  padding: 10px 0;
+  align-items: center;
+}
+
+.middleArea {
+  display: none;
+}
+
+.rightAreaDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 990px) {
+  .navBar {
+    height: 115px;
+    padding-left: 20px;
+  }
+
+  .hamburger {
+    display: none;;
+  }
+
+  .crisp {
+    padding: 35px 0;
+  }
+
+  .rightArea {
+    display: none;
+  }
+
+  .middleArea {
+    display: flex;
+  }
+
+  .rightAreaDesktop {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  ul {
+    display: flex; 
+    list-style-type: none;
+    align-items: center;
+    gap: 28px;
+  }
+
+  li {
+    color: white;
+    font-family: 'Oswald';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
 
 /* <!-- Menü Bitiş --> */
 
