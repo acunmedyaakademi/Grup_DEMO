@@ -33,6 +33,10 @@ textarea,
 select {
   font: inherit;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 p,
 h1,
 h2,
@@ -64,7 +68,127 @@ h6 {
 /* <!-- Grid Alanı Bitiş --> */
 
 /* <!-- Products Başlangıç DOĞUKAN--> */
+.product-container {
+  margin: 0 auto;
+  max-width: 1878px;
+  /* display: grid; */
+  /* grid-template-columns: 394px 1fr; */
+  padding: 30px 14px 24px;
+  gap: 30px;
+}
 
+.product-filter h4 {
+  margin-bottom: 31px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.filter-list {
+  display: none;
+  list-style: none;
+  user-select: none;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+}
+
+.image-container {
+  height: 182px;
+  margin-bottom: 10px;
+
+  display: flex;
+}
+
+.image-container img {
+  object-fit: cover;
+  flex: 1;
+}
+
+.discount {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  top: 10px;
+}
+
+.card-content .card-title {
+  color: #bdbdbd;
+}
+
+.card-content .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.discounted-price {
+  text-decoration: line-through;
+  color: #eb5757;
+  font-size: 14px;
+}
+
+.filter {
+  cursor: pointer;
+  margin: 0 0 10px 10px;
+}
+
+.filter label {
+  color: #828282;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.filter-checkbox:checked + label {
+  color: #000;
+}
+
+@media (min-width: 746px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
+  }
+
+  .image-container {
+    height: 450px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .product-filter {
+    border-right: 1px solid #000;
+    height: 100%;
+  }
+
+  .filter-list {
+    display: block;
+  }
+}
 /* <!-- Products Bitiş --> */
 
 /* <!-- Shoping  Başlangıç  ELİF--> */
