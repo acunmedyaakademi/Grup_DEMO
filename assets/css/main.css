@@ -9,6 +9,7 @@
 }
 * {
   margin: 0;
+  padding: 0;
 }
 html,
 body {
@@ -51,9 +52,8 @@ h6 {
 .navBar {
   background-color: black;
   display: flex;
-  justify-content: space-between;
   height: 50px;
-  gap: 70px;
+  justify-content: space-between;
 }
 
 .middleArea {
@@ -87,14 +87,90 @@ h6 {
   display: none;
 }
 
-@media screen and (min-width: 990px) {
+.posts {
+  background-color: #F8F9FB;
+  display: grid;
+  margin-left: 14px;
+  margin-right: 14px;
+  gap: 30px;
+}
+
+.blogContainer {
+  background-color:#FFFFFF;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 70px;
+}
+
+.containerPost {
+  background: #F8F9FB;
+}
+
+.blogMainTitle {
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.blogHeader {
+  font-family: 'Oswald';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 14px;
+}
+
+.blogContent {
+  font-family: 'Roboto Light';
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 1%;
+  color: #000000;
+  font-weight: 400;
+}
+
+.blogArticleTitle {
+  text-transform: uppercase;
+  margin-top: 7px;
+  color: gray;
+  font-family: 'Oswald';
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;;
+}
+
+.posts :last-child  {
+    margin-bottom: 28px;
+  }
+
+@media screen and (min-width: 750px) and (max-width: 1440px) {
+  .posts {
+   grid-template-columns: repeat(2, 1fr);
+  }
+
+  .posts :last-child  {
+    margin-bottom: 28px;
+  }
+
+  .posts :nth-child(3) {
+    margin-bottom: 28px;
+  } 
+}
+
+@media screen and (min-width: 1440px) {
   .navBar {
     height: 115px;
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hamburger {
-    display: none;;
+    display: none;
   }
 
   .crisp {
@@ -105,15 +181,63 @@ h6 {
     display: none;
   }
 
+  .blogContainer {
+    padding: 24px;
+    height: 300px;
+    overflow: scroll;
+    margin-bottom: 46px;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 21px;
+    margin-right: 21px;
+    gap: 30px;
+    overflow: hidden;
+  }
+
+  .blogHeader {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .blogMainTitle {
+    padding-left: 21px;
+    padding-top: 46px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 68px;
+    padding-right: 0;
+  }
+
+  .blogContent {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .blogArticleTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
   .middleArea {
     display: flex;
+    text-align: center;
+  }
+
+  .posts {
+    margin-bottom: 0px;
   }
 
   .rightAreaDesktop {
     display: flex;
     gap: 12px;
     align-items: center;
-    padding-right: 20px;
   }
 
   ul {
