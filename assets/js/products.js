@@ -28,9 +28,14 @@ const createElement = () => {
 
   container.forEach((item) => {
     const piece = item.getAttribute('piece') || products.length;
+    const category = item.getAttribute('category');
     item.innerHTML = '';
 
-    if (filter.length > 0) {
+    if (category) {
+      tempObject = products.filter((productItem) => {
+        return productItem.category === category;
+      });
+    } else if (!category && filter.length > 0) {
       filter.map(
         (filterItem) =>
           (tempObject = [
